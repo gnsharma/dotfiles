@@ -94,7 +94,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.iterm2_shell_integration.zsh
 export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Downloads
+export PROJECT_HOME=$HOME/Code
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 source /usr/local/bin/virtualenvwrapper.sh
