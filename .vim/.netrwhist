@@ -1,4 +1,10 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =8
 let g:netrw_dirhist_1='/Users/govind/Downloads/hospitalProject/app/templates/app'
 let g:netrw_dirhist_2='/Users/govind/Downloads/hospitalProject/.git'
+let g:netrw_dirhist_3='/Users/govind/Code/hospitalProject/app/templates/app'
+let g:netrw_dirhist_4='/Users/govind/Code/tutorialProject/polls/templates'
+let g:netrw_dirhist_5='/Users/govind/Code/tutorialProject/polls/templates/polls'
+let g:netrw_dirhist_6='/Users/govind/Code/tutorialProject/polls/templates'
+let g:netrw_dirhist_7='/Users/govind/Code/tutorialProject/polls/templates/polls'
+let g:netrw_dirhist_8='/Users/govind/dotfiles'

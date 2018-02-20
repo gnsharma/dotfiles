@@ -129,4 +129,7 @@ function vi_mode_prompt_info() {
 RPS1='$(vi_mode_prompt_info)'
 RPS2=$RPS1
 
+alias pmr='python manage.py runserver'
+alias pms='python manage.py shell'
 
+eval $(thefuck --alias)
