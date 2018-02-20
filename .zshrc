@@ -36,7 +36,7 @@ ZSH_THEME="sunaku"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -58,9 +58,7 @@ ZSH_THEME="sunaku"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git
-)
+plugins=( git virtualenvwrapper web-search screen python pep8 osx node jsontools git-extras django common-aliases brew autopep8 )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -93,11 +91,13 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.iterm2_shell_integration.zsh
+
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Code
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 source /usr/local/bin/virtualenvwrapper.sh
+
 bindkey -v
 
 # Better searching in command mode
@@ -128,6 +128,7 @@ function vi_mode_prompt_info() {
 # define right prompt, regardless of whether the theme defined it
 RPS1='$(vi_mode_prompt_info)'
 RPS2=$RPS1
+
 
 alias pmr='python manage.py runserver'
 alias pms='python manage.py shell'
