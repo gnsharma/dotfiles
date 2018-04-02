@@ -58,7 +58,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=( git virtualenvwrapper web-search screen python pep8 osx node jsontools git-extras django common-aliases brew autopep8 )
+plugins=( git virtualenvwrapper web-search screen python pep8 osx node jsontools git-extras django common-aliases autopep8 )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,6 +99,8 @@ export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 source /usr/local/bin/virtualenvwrapper.sh
 
 bindkey -v
+bindkey -M viins "jk" vi-cmd-mode  
+bindkey -M viins "kj" vi-cmd-mode  
 
 # Better searching in command mode
 bindkey -M vicmd '?' history-incremental-search-backward
@@ -134,3 +136,7 @@ alias pmr='python manage.py runserver'
 alias pms='python manage.py shell'
 
 eval $(thefuck --alias)
+
+
+### Added by IBM Cloud CLI
+source /usr/local/Bluemix/bx/zsh_autocomplete
