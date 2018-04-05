@@ -1,51 +1,5 @@
-execute pathogen#infect()
-syntax on
-filetype plugin indent on
-
-set backspace=indent,eol,start
-nmap \l :setlocal number!<CR>
-nmap \o :set paste!<CR>
-
-nmap j gj
-nmap k gk
-
-inoremap jk <Esc>
-inoremap kj <Esc> 
-
-set incsearch
-set ignorecase
-set smartcase
-set hlsearch
-nmap \q :nohlsearch<CR>
-
-nmap <C-e> :e#<CR>
-nmap <C-n> :bnext<CR>
-nmap <C-p> :bprev<CR>
-
-nmap <C-a> :tabn<CR>
-nmap <C-d> :tabp<CR>
-nmap <C-z> :tabclose<CR>
-nmap <C-x> :tabonly<CR>
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_auto_loc_list = 0
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1 
-
-let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_aggregate_errors = 1
-
-set nocompatible   " Disable vi-compatibility
-set laststatus=2   " Always show the statusline
-set encoding=utf-8 " Necessary to show Unicode glyphs
-
-nmap \e :NERDTreeToggle<CR>
-
-let NERDTreeMapOpenInTab='<ENTER>'
-let NERDTreeMapActivateNode='v'
-
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview
+source $HOME/dotfiles/.vim/init.vimrc
+source $HOME/dotfiles/.vim/general.vimrc
+source $HOME/dotfiles/.vim/plugins.vimrc
+source $HOME/dotfiles/.vim/keys.vimrc
+source $HOME/dotfiles/.vim/line.vimrc
