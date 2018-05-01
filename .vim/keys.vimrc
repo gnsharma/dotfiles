@@ -20,3 +20,4 @@ nmap <C-x> :tabonly<CR>
 
 nmap \e :NERDTreeToggle<CR>
 
+nmap ; :FZF
