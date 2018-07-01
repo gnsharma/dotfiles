@@ -1,23 +1,29 @@
-nmap \l :setlocal number!<CR>
-nmap \o :set paste!<CR>
+nnoremap \l :setlocal number!<CR>
+nnoremap \o :set paste!<CR>
 
-nmap j gj
-nmap k gk
+nnoremap j gj
+nnoremap k gk
 
 inoremap jk <Esc>
 inoremap kj <Esc>
 
-nmap \q :nohlsearch<CR>
+nnoremap \q :nohlsearch<CR>
 
-nmap <C-e> :e#<CR>
-nmap <C-n> :bnext<CR>
-nmap <C-p> :bprev<CR>
+nnoremap <C-e> :e#<CR>
+nnoremap <C-n> :bnext<CR>
+nnoremap <C-p> :bprev<CR>
 
-nmap <C-a> :tabn<CR>
-nmap <C-d> :tabp<CR>
-nmap <C-z> :tabclose<CR>
-nmap <C-x> :tabonly<CR>
+nnoremap <C-a> :tabn<CR>
+nnoremap <C-d> :tabp<CR>
+nnoremap <C-z> :tabclose<CR>
+nnoremap <C-x> :tabonly<CR>
 
-nmap \e :NERDTreeToggle<CR>
+nnoremap \e :NERDTreeToggle<CR>
 
-nmap ; :FZF
+nnoremap ; :FZF<CR>
+
+nnoremap sO :SessionOpen<CR>
+nnoremap sO! :SessionOpen!<CR>
+
+nnoremap sC :SessionClose<CR>
+nnoremap sC! :SessionClose!<CR>

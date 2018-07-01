@@ -2,7 +2,6 @@
 *_flymake.*
 *~
 .#*
-.DS_Store
 .gvimlocal
 .postinstall
 .ropeproject

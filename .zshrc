@@ -58,7 +58,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=( git virtualenvwrapper web-search screen python pep8 osx node jsontools git-extras django common-aliases autopep8 )
+plugins=( git virtualenvwrapper web-search screen python pep8 osx node jsontools git-extras django common-aliases autopep8 zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,8 +99,8 @@ export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 source /usr/local/bin/virtualenvwrapper.sh
 
 bindkey -v
-bindkey -M viins "jk" vi-cmd-mode  
-bindkey -M viins "kj" vi-cmd-mode  
+bindkey -M viins "jk" vi-cmd-mode
+bindkey -M viins "kj" vi-cmd-mode
 
 # Better searching in command mode
 bindkey -M vicmd '?' history-incremental-search-backward
@@ -156,3 +156,12 @@ export FZF_DEFAULT_OPTS='--height 50% --reverse --border'
 
 alias v='vim $(fzf)'
 
+# don't check for new mail
+MAILCHECK=0
+
+# Load pyenv automatically by adding
+# the following to ~/.zshrc:
+
+export PATH="/Users/govind/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"

@@ -14,4 +14,3 @@ autocmd FileType vue syntax sync fromstart
 
 autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
-

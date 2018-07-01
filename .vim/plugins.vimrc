@@ -48,3 +48,10 @@ let g:session_autosave_periodic = 60
 let g:session_default_to_last = 1
 let g:session_command_aliases = 1
 
+" Vim better whitespace
+let g:better_white_enabled=1
+let g:strip_whitespace_on_save=1
+let g:strip_whitelines_at_eof=1
+
+" Vim autopep8
+let g:autopep8_max_line_length=79
