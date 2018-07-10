@@ -141,12 +141,6 @@ eval $(thefuck --alias)
 ### Added by IBM Cloud CLI
 source /usr/local/Bluemix/bx/zsh_autocomplete
 
-# Audience manager environment variables
-export AUDIENCE_MANAGER_SERVICE_DB_HOST='localhost'
-export AUDIENCE_MANAGER_SERVICE_DB_NAME='audience_manager_service'
-export AUDIENCE_MANAGER_SERVICE_DB_USER='root'
-export AUDIENCE_MANAGER_SERVICE_DB_PASSWORD=''
-
 # fzf options
 export FZF_DEFAULT_COMMAND='
   (git ls-tree -r --name-only HEAD ||
@@ -154,8 +148,8 @@ export FZF_DEFAULT_COMMAND='
       sed s/^..//) 2> /dev/null'
 export FZF_DEFAULT_OPTS='--height 50% --reverse --border'
 
-alias v='vim $(fzf)'
-
+alias v='nvim $(fzf)'
+alias vi='nvim'
 # don't check for new mail
 MAILCHECK=0
 
