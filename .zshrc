@@ -159,3 +159,13 @@ MAILCHECK=0
 export PATH="/Users/govind/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# Git aliases
+alias gs='git status'
+alias gco='git checkout'
+alias gl='git log'
+alias gst='git stash'
+alias gpu='git push'
+alias gp='git pull'
+alias gc='git commit'
+alias ga='git add'
