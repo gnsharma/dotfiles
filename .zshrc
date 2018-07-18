@@ -92,11 +92,16 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.iterm2_shell_integration.zsh
 
+# Virtualenvwrapper configuratons
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Code
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 source /usr/local/bin/virtualenvwrapper.sh
+
+# pyenv-virtualenvwrapper configurations
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+alias mkvirtualenv='pyenv virtualenvwrapper; mkvirtualenv'
 
 bindkey -v
 bindkey -M viins "jk" vi-cmd-mode
@@ -131,12 +136,10 @@ function vi_mode_prompt_info() {
 RPS1='$(vi_mode_prompt_info)'
 RPS2=$RPS1
 
-
 alias pmr='python manage.py runserver'
 alias pms='python manage.py shell'
 
 eval $(thefuck --alias)
-
 
 ### Added by IBM Cloud CLI
 source /usr/local/Bluemix/bx/zsh_autocomplete
@@ -169,3 +172,7 @@ alias gpu='git push'
 alias gp='git pull'
 alias gc='git commit'
 alias ga='git add'
+
+# did file alias
+alias did="vi +'normal Go' +'r!date' ~/did.txt"
+alias bugs="vi ~/bugs.txt"
