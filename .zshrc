@@ -95,7 +95,7 @@ source ~/.iterm2_shell_integration.zsh
 # Virtualenvwrapper configuratons
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Code
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.7
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
 source /usr/local/bin/virtualenvwrapper.sh
 
@@ -176,3 +176,13 @@ alias ga='git add'
 # did file alias
 alias did="vi +'normal Go' +'r!date' ~/did.txt"
 alias bugs="vi ~/bugs.txt"
+
+alias ls='colorls --dark --sort-dirs --report -A --gs'
+alias lc='colorls --tree --dark -A'
+
+# tab completion for colorls
+source $(dirname $(gem which colorls))/tab_complete.sh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
