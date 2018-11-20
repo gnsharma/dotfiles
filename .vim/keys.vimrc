@@ -20,7 +20,8 @@ nnoremap <C-x> :tabonly<CR>
 
 nnoremap \e :NERDTreeToggle<CR>
 
-nnoremap ; :FZF<CR>
+nnoremap ; :Files<CR>
+nnoremap <C-f> :Rg<CR>
 
 nnoremap sO :SessionOpen<CR>
 nnoremap sO! :SessionOpen!<CR>
