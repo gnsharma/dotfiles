@@ -169,6 +169,7 @@ alias gpu='git push'
 alias gp='git pull'
 alias gc='git commit'
 alias ga='git add'
+alias gpuf='git push --force-with-lease'
 
 # did file alias
 alias did="vi +'normal Go' +'r!date' ~/did.txt"
