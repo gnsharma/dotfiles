@@ -16,3 +16,8 @@ autocmd BufWinLeave *.* mkview
 autocmd BufWinEnter *.* silent loadview
 
 set colorcolumn=100
+
+set expandtab
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
