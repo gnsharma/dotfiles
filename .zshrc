@@ -58,8 +58,10 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=( git virtualenvwrapper web-search screen python pep8 osx node jsontools git-extras django common-aliases autopep8 zsh-syntax-highlighting)
+plugins=(git virtualenvwrapper web-search screen python pep8 osx node jsontools git-extras django common-aliases autopep8 zsh-syntax-highlighting)
+plugins+=(zsh-nvm)
 
+export NVM_LAZY_LOAD=true
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -150,8 +152,6 @@ export FZF_DEFAULT_OPTS='--height 50% --reverse --border'
 
 alias v='nvim $(fzf)'
 alias vi='nvim'
-# don't check for new mail
-MAILCHECK=0
 
 # Load pyenv automatically by adding
 # the following to ~/.zshrc:
@@ -180,9 +180,5 @@ alias lc='colorls --tree --dark -A'
 
 # tab completion for colorls
 source $(dirname $(gem which colorls))/tab_complete.sh
-
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && . "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
