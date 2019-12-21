@@ -1,0 +1,12 @@
+alias pmr='python manage.py runserver'
+
+# Git aliases
+alias gs='git status'
+alias gco='git checkout'
+alias gl='git log'
+alias gst='git stash'
+alias gpu='git push'
+alias gp='git pull'
+alias gc='git commit'
+alias ga='git add'
+alias gpuf='git push --force-with-lease'

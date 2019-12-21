@@ -1,0 +1,9 @@
+sandbox_init_pyenv(){
+ if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init - zsh)"
+    pyenv virtualenvwrapper;
+ fi
+}
+
+sandbox_hook pyenv workon
+sandbox_hook pyenv mkvirtualenv
