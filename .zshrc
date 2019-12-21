@@ -36,7 +36,7 @@ ZSH_THEME="sunaku"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
+# ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -99,7 +99,8 @@ export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Code
 export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3.7
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
-source /usr/local/bin/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_SCRIPT=/usr/local/bin/virtualenvwrapper.sh
+source /usr/local/bin/virtualenvwrapper_lazy.sh
 
 # pyenv-virtualenvwrapper configurations
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
@@ -144,10 +145,10 @@ alias pms='python manage.py shell'
 eval $(thefuck --alias)
 
 ### Added by IBM Cloud CLI
-source /usr/local/Bluemix/bx/zsh_autocomplete
+# source /usr/local/Bluemix/bx/zsh_autocomplete
 
 # fzf options
-export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
+export FZF_DEFAULT_COMMAND='rg --no-ignore-vcs --hidden'
 export FZF_DEFAULT_OPTS='--height 50% --reverse --border'
 
 alias v='nvim $(fzf)'
@@ -157,8 +158,12 @@ alias vi='nvim'
 # the following to ~/.zshrc:
 
 export PATH="/Users/govind/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+if command -v pyenv 1>/dev/null 2>&1; then
+  eval "$(pyenv init -)"
+fi
+
+# Disable this as i don't need to auto detect virtual env on entering directories
+# eval "$(pyenv virtualenv-init -)"
 
 # Git aliases
 alias gs='git status'
@@ -175,10 +180,24 @@ alias gpuf='git push --force-with-lease'
 alias did="vi +'normal Go' +'r!date' ~/did.txt"
 alias bugs="vi ~/bugs.txt"
 
-alias ls='colorls --dark --sort-dirs --report -A --gs'
+# alias ls='colorls --dark --sort-dirs --report -A --gs'
 alias lc='colorls --tree --dark -A'
 
 # tab completion for colorls
 source $(dirname $(gem which colorls))/tab_complete.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+
+# For compilers to find zlib you may need to set:
+# export LDFLAGS="${LDFLAGS} -L/usr/local/opt/zlib/lib"
+# export CPPFLAGS="${CPPFLAGS} -I/usr/local/opt/zlib/include"
+
+# For pkg-config to find zlib you may need to set:
+# export PKG_CONFIG_PATH="${PKG_CONFIG_PATH} /usr/local/opt/zlib/lib/pkgconfig"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/govind/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/govind/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/govind/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/govind/google-cloud-sdk/completion.zsh.inc'; fi

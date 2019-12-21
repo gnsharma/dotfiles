@@ -55,3 +55,6 @@ let g:strip_whitelines_at_eof=1
 
 " Vim autopep8
 let g:autopep8_max_line_length=79
+
+" Vim-prettier
+let g:prettier#exec_cmd_path="~/.nvm/versions/node/v10.15.2/bin/prettier"
