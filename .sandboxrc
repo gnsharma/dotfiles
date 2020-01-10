@@ -7,3 +7,19 @@ sandbox_init_pyenv(){
 
 sandbox_hook pyenv workon
 sandbox_hook pyenv mkvirtualenv
+
+sandbox_init_fuck(){
+ eval $(thefuck --alias)
+}
+
+sandbox_init_br(){
+  source /Users/govind/Library/Preferences/org.dystroy.broot/launcher/bash/br
+}
+
+sandbox_init_nvm(){
+  source "${HOME}/.zsh-nvm/zsh-nvm.plugin.zsh"
+}
+
+sandbox_hook nvm npm 
+sandbox_hook nvm node 
+

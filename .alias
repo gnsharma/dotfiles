@@ -10,3 +10,11 @@ alias gp='git pull'
 alias gc='git commit'
 alias ga='git add'
 alias gpuf='git push --force-with-lease'
+alias gd='git diff'
+
+# did file alias
+alias did="vi +'normal Go' +'r!date' $HOME/did.txt"
+alias bugs="vi $HOME/bugs.txt"
+
+alias v='nvim $(fzf)'
+alias vi='nvim'
