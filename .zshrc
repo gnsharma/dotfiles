@@ -9,7 +9,6 @@ export FZF_DEFAULT_OPTS='--height 50% --layout reverse --info inline --border -m
 source "${HOME}/dotfiles/.alias"
 source "${HOME}/dotfiles/sandboxd"
 source "${HOME}/.iterm2_shell_integration.zsh"
-source "${HOME}/.zsh-nvm/zsh-nvm.plugin.zsh"
 
 bindkey -v
 bindkey -M viins "jk" vi-cmd-mode
