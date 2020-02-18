@@ -10,12 +10,12 @@ alias gp='git pull'
 alias gc='git commit'
 alias ga='git add'
 alias gpuf='git push --force-with-lease'
-alias gd='git diff'
+alias gd='git difftool -y'
 alias gpug='git push origin HEAD:refs/for/master'
 
 # did file alias
 alias did="vi +'normal Go' +'r!date' $HOME/did.txt"
 alias bugs="vi $HOME/bugs.txt"
 
-alias v='nvim $(fzf)'
+alias v='nvim $(fzf --height 80% --layout reverse --info inline --border -m --preview "bat --style=numbers --color=always {} | head -500" --color "fg:#bbccdd,fg+:#ddeeff,preview-bg:#223344,border:#778899")'
 alias vi='nvim'

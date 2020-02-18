@@ -4,7 +4,7 @@ export NVM_LAZY_LOAD=true
 
 # fzf options
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
-export FZF_DEFAULT_OPTS='--height 50% --layout reverse --info inline --border -m --preview "bat --style=numbers --color=always {} | head -500" --color "fg:#bbccdd,fg+:#ddeeff,preview-bg:#223344,border:#778899" '
+export FZF_DEFAULT_OPTS='--height 50% --layout reverse --info inline --border -m'
 
 source "${HOME}/dotfiles/.alias"
 source "${HOME}/dotfiles/sandboxd"

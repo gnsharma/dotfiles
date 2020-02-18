@@ -22,4 +22,5 @@ sandbox_init_nvm(){
 
 sandbox_hook nvm npm 
 sandbox_hook nvm node 
+sandbox_hook nvm workon 
 
