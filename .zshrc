@@ -1,6 +1,5 @@
 export WORKON_HOME=$HOME/.virtualenvs
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
-export NVM_LAZY_LOAD=true
 
 # fzf options
 export FZF_DEFAULT_COMMAND='rg --files --no-ignore-vcs --hidden'
@@ -8,15 +7,14 @@ export FZF_DEFAULT_OPTS='--height 50% --layout reverse --info inline --border -m
 
 source "${HOME}/dotfiles/.alias"
 source "${HOME}/dotfiles/sandboxd"
-source "${HOME}/.iterm2_shell_integration.zsh"
 
-bindkey -v
-bindkey -M viins "jk" vi-cmd-mode
-bindkey -M viins "kj" vi-cmd-mode
+# bindkey -v
+# bindkey -M viins "jk" vi-cmd-mode
+# bindkey -M viins "kj" vi-cmd-mode
 
 # Better searching in command mode
-bindkey -M vicmd '?' history-incremental-search-backward
-bindkey -M vicmd '/' history-incremental-search-forward
+# bindkey -M vicmd '?' history-incremental-search-backward
+# bindkey -M vicmd '/' history-incremental-search-forward
 
 # Beginning search with arrow keys
 # bindkey "^[OA" up-line-or-beginning-search
@@ -25,7 +23,7 @@ bindkey -M vicmd '/' history-incremental-search-forward
 # bindkey -M vicmd "j" down-line-or-beginning-search
 
 # Make Vi mode transitions faster (KEYTIMEOUT is in hundredths of a second)
-export KEYTIMEOUT=1
+# export KEYTIMEOUT=1
 
 # Updates editor information when the keymap changes.
 function zle-line-init zle-keymap-select {
@@ -39,4 +37,8 @@ zle -N zle-keymap-select
 
 PS1="[%~]: "
 RPS1="[% INSERT]%"
-export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+
+# export EDITOR="/usr/local/bin/nvim"
+export PAGER="less"
+
+export NPM_TOKEN=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

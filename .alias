@@ -2,20 +2,20 @@ alias pmr='python manage.py runserver'
 
 # Git aliases
 alias gs='git status'
-alias gco='git checkout'
-alias gl='git log'
+alias gsw='git switch'
 alias gst='git stash'
+alias gb='git branch'
+alias gl='git log'
 alias gpu='git push'
 alias gp='git pull'
 alias gc='git commit'
 alias ga='git add'
 alias gpuf='git push --force-with-lease'
 alias gd='git difftool -y'
-alias gpug='git push origin HEAD:refs/for/master'
 
 # did file alias
 alias did="vi +'normal Go' +'r!date' $HOME/did.txt"
-alias bugs="vi $HOME/bugs.txt"
 
-alias v='nvim $(fzf --height 80% --layout reverse --info inline --border -m --preview "bat --style=numbers --color=always {} | head -500" --color "fg:#bbccdd,fg+:#ddeeff,preview-bg:#223344,border:#778899")'
 alias vi='nvim'
+alias v='nvim $(fzf --height 80% --layout reverse --info inline --border -m --preview "bat --style=numbers --color=always {} | head -500" --color "fg:#bbccdd,fg+:#ddeeff,preview-bg:#223344,border:#778899")'
+alias fzfp='fzf --height 80% --layout reverse --info inline --border -m --preview "bat --style=numbers --color=always {} | head -500" --color "fg:#bbccdd,fg+:#ddeeff,preview-bg:#223344,border:#778899"'

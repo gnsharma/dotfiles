@@ -1,4 +1,5 @@
 sandbox_init_pyenv(){
+ export PATH="$HOME/.pyenv/bin:$PATH"
  if command -v pyenv 1>/dev/null 2>&1; then
     eval "$(pyenv init - zsh)"
     pyenv virtualenvwrapper;
@@ -7,20 +8,17 @@ sandbox_init_pyenv(){
 
 sandbox_hook pyenv workon
 sandbox_hook pyenv mkvirtualenv
-
-sandbox_init_fuck(){
- eval $(thefuck --alias)
-}
+sandbox_hook_shims pyenv
 
 sandbox_init_br(){
   source /Users/govind/Library/Preferences/org.dystroy.broot/launcher/bash/br
 }
 
-sandbox_init_nvm(){
-  source "${HOME}/.zsh-nvm/zsh-nvm.plugin.zsh"
+sandbox_init_volta(){
+  export VOLTA_HOME=$HOME/.volta
+  export PATH="$VOLTA_HOME/bin:$PATH"
 }
 
-sandbox_hook nvm npm 
-sandbox_hook nvm node 
-sandbox_hook nvm workon 
-
+sandbox_hook volta npm
+sandbox_hook volta node
+sandbox_hook volta yarn

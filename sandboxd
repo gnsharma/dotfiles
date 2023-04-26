@@ -23,7 +23,7 @@ function sandbox_delete_hooks(){
 function sandbox(){
   local cmd=$1
 
-   if [[ "$(type $cmd | grep -o function)" = "function" ]]; then
+   if [[ "$(type $cmd | GREP_OPTIONS= grep -o function)" = "function" ]]; then
     (>&2 echo "sandboxing $cmd ...")
     sandbox_delete_hooks $cmd
     sandbox_init_$cmd # run user-defined sandbox
@@ -33,6 +33,7 @@ function sandbox(){
   fi
 }
 
+# adds hooks to sandboxes
 function sandbox_hook(){
   local cmd=$1
   local hook=$2
@@ -41,14 +42,23 @@ function sandbox_hook(){
   eval "$hook(){ sandbox $cmd; $hook \$@ ; }"
 }
 
-
-
+# automatically add hooks for shims of virtualenvs, e.g. pyenv, rbenv, etc
+# optionally pass the shim directory, assumed to be $HOME/.<command>/shims
+function sandbox_hook_shims(){
+  local cmd=$1
+  local dir="${2:-$HOME/.$1/shims}"
+  if test -d $dir; then
+    for shim in $(ls $dir); do
+      sandbox_hook $1 $shim
+    done
+  fi
+}
 
 source "$SANDBOXRC"
 
 # create hooks for the sandbox names themselves
 function sandbox_initialise(){
-  local funcs="$( cat $SANDBOXRC | sed 's/#.*$//g' | grep -o 'sandbox_init_[^(]\+' )"
+  local funcs="$( cat $SANDBOXRC | sed 's/#.*$//g' | GREP_OPTIONS= grep -o 'sandbox_init_[^(]\+' )"
   while read f; do
     local cmd=$(echo $f | sed s/sandbox_init_//)
     sandbox_hook $cmd $cmd;
